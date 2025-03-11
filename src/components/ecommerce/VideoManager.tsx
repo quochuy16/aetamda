@@ -126,7 +126,7 @@ export default function VideoManager() {
             </TableRow>
           </TableHeader>
           <TableBody className="divide-y divide-gray-100 dark:divide-gray-800">
-            {tableData.map((video, index) => (
+            {tableData.slice().reverse().map((video, index) => (
               <TableRow key={video.id}>
                 
                 <TableCell
