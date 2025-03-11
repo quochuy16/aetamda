@@ -32,7 +32,7 @@ export default function RecentOrders() {
       try {
         const videosResponse = await axios.get("https://huy-7xbr.onrender.com/api/v1/get-video");
 
-        console.log("Videos:", videosResponse.data.data);
+        // console.log("Videos:", videosResponse.data.data);
 
         // 3️⃣ Chuyển dữ liệu video thành danh sách hiển thị
         const videos: Video[] = videosResponse.data.data.map((item: any) => ({
