@@ -35,7 +35,7 @@ export default function RecentOrders() {
         console.log("Videos:", videosResponse.data.data);
 
         // 3️⃣ Chuyển dữ liệu video thành danh sách hiển thị
-        const videos: Video[] = videosResponse.data.data.map((item) => ({
+        const videos: Video[] = videosResponse.data.data.map((item: any) => ({
           id: item.id,
           url: item.url,
         }));
