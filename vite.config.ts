@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
+import legacy from '@vitejs/plugin-legacy';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -13,6 +14,9 @@ export default defineConfig({
         exportType: "named",
         namedExport: "ReactComponent",
       },
+    }),
+    legacy({
+      targets: ['defaults', 'not IE 11'],
     }),
   ],
 });
