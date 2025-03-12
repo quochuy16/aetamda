@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
+import react from "@vitejs/plugin-react";
 import legacy from '@vitejs/plugin-legacy';
 
 // https://vite.dev/config/
@@ -10,13 +11,13 @@ export default defineConfig({
     svgr({
       svgrOptions: {
         icon: true,
-        // This will transform your SVG to a React component
         exportType: "named",
         namedExport: "ReactComponent",
       },
     }),
+    react(),
     legacy({
-      targets: ['defaults', 'not IE 11'],
+      targets: ["defaults", "not IE 11", "iOS >= 12"], 
     }),
   ],
 });
